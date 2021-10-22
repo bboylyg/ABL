@@ -115,11 +115,89 @@ The final results of unlearning will be saved in the path `ABL_results`, and `lo
 
 ## Source of Backdoor Attacks
 
-- Dynamic: https://github.com/VinAIResearch/input-aware-backdoor-attack-release
-- CL: https://github.com/hkunzhe/label_consistent_attacks_pytorch
-- DFST: https://github.com/Megum1/DFST
-- LBA: http://sandlab.cs.uchicago.edu/latent/
-- CBA: https://github.com/TemporaryAcc0unt/composite-attack
+#### Attacks
+
+**CL:** Clean-label backdoor attacks
+
+- [Paper](https://people.csail.mit.edu/madry/lab/cleanlabel.pdf)
+- [pytorch implementation](https://github.com/hkunzhe/label_consistent_attacks_pytorch)
+
+**SIG:** A New Backdoor Attack in CNNS by Training Set Corruption Without Label Poisoning
+
+- [Paper](https://ieeexplore.ieee.org/document/8802997/footnotes)
+
+```python
+## reference code
+def plant_sin_trigger(img, delta=20, f=6, debug=False):
+    """
+    Implement paper:
+    > Barni, M., Kallas, K., & Tondi, B. (2019).
+    > A new Backdoor Attack in CNNs by training set corruption without label poisoning.
+    > arXiv preprint arXiv:1902.11237
+    superimposed sinusoidal backdoor signal with default parameters
+    """
+    alpha = 0.2
+    img = np.float32(img)
+    pattern = np.zeros_like(img)
+    m = pattern.shape[1]
+    for i in range(img.shape[0]):
+        for j in range(img.shape[1]):
+            for k in range(img.shape[2]):
+                pattern[i, j] = delta * np.sin(2 * np.pi * j * f / m)
+
+    img = alpha * np.uint32(img) + (1 - alpha) * pattern
+    img = np.uint8(np.clip(img, 0, 255))
+
+    #     if debug:
+    #         cv2.imshow('planted image', img)
+    #         cv2.waitKey()
+
+    return img
+```
+
+**Dynamic:** Input-aware Dynamic Backdoor Attack
+
+- [paper](https://papers.nips.cc/paper/2020/hash/234e691320c0ad5b45ee3c96d0d7b8f8-Abstract.html)
+- [pytorch implementation](https://github.com/VinAIResearch/input-aware-backdoor-attack-release)
+
+**FC:** Poison Frogs! Targeted Clean-Label Poisoning Attacks on Neural Networks
+
+- [paper](file/22722a343513ed45f14905eb07621686-Paper.pdf)
+- [pytorch implementation](https://github.com/FlouriteJ/PoisonFrogs)
+
+**DFST:** Deep Feature Space Trojan Attack of Neural Networks by Controlled Detoxification
+
+- [paper](https://arxiv.org/abs/2012.11212)
+- [tensorflow implementation](https://github.com/Megum1/DFST)
+
+**LBA:** Latent Backdoor Attacks on Deep Neural Networks
+
+- [paper](https://people.cs.uchicago.edu/~ravenben/publications/pdf/pbackdoor-ccs19.pdf)
+- [tensorflow implementation](http://sandlab.cs.uchicago.edu/latent/)
+
+**CBA:** Composite Backdoor Attack for Deep Neural Network by Mixing Existing Benign Features
+
+- [paper](https://dl.acm.org/doi/abs/10.1145/3372297.3423362)
+- [pytorch implementation](https://github.com/TemporaryAcc0unt/composite-attack)
+
+#### Feature space attack benchmark
+
+`Note`: This repository is the official implementation of [Just How Toxic is Data Poisoning? A Unified Benchmark for Backdoor and Data Poisoning Attacks](https://arxiv.org/abs/2006.12557).
+
+- [pytorch implementation](https://github.com/aks2203/poisoning-benchmark)
+
+#### Library
+
+`Note`: TrojanZoo provides a universal pytorch platform to conduct security researches (especially backdoor attacks/defenses) of image classification in deep learning.
+
+Backdoors 101 — is a PyTorch framework for state-of-the-art backdoor defenses and attacks on deep learning models.
+
+poisoning Feature space attack benchmark A unified benchmark problem for data poisoning attacks
+
+- [trojanzoo](https://github.com/ain-soph/trojanzoo)
+- [backdoors101](https://github.com/ebagdasa/backdoors101)
+
+
 
 ## References
 
