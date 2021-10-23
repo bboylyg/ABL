@@ -60,7 +60,7 @@ from data_loader import *
 ```
 However, for the other attacks such as `Dynamic, DFTS, FC, etc`. It is not easy to contain them into the `get_backdoor_loader` . So the much elegant way is to create a local fixed poisoning data of these attacks by using the demo code `create_poisoned_data.py`, and then load this poisoned data by set the `opt.loader_fixed_data == True`. 
 
-We provide a demo of how to  **create poisoning data** in the `create_backdoor_data` dictionary.
+We provide a demo of how to  **create poisoning data of dynamic attack** in the `create_backdoor_data` dictionary.
 
 Please carefully read the `create_poisoned_data.py` and `get_backdoor_loader`, then change the parameters for your experiment.  
 
