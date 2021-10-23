@@ -46,7 +46,7 @@ The use of this code to create a poisoned data is look like this:
 ```python
 from data_loader import *
     if opt.load_fixed_data:
-        # load the fixed poisoned data, e.g. Dynamic, FC, DFST attacks etc. 
+        # load the fixed poisoned data of numpy format, e.g. Dynamic, FC, DFST attacks etc. 
         # Note that the load data type is a pytorch tensor
         poisoned_data = np.load(opt.poisoned_data_path, allow_pickle=True)
         poisoned_data_loader = DataLoader(dataset=poisoned_data_tf,
