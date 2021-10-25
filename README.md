@@ -49,7 +49,7 @@ from data_loader import *
         # load the fixed poisoned data of numpy format, e.g. Dynamic, FC, DFST attacks etc. 
         # Note that the load data type is a pytorch tensor
         poisoned_data = np.load(opt.poisoned_data_path, allow_pickle=True)
-        poisoned_data_loader = DataLoader(dataset=poisoned_data_tf,
+        poisoned_data_loader = DataLoader(dataset=poisoned_data,
                                             batch_size=opt.batch_size,
                                             shuffle=True,
                                             )
