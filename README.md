@@ -205,8 +205,7 @@ If you find this code is useful for your research, please cite our paper
 
 ```
 @inproceedings{li2021anti,
-  title={Anti-Backdoor Learning: Training Clean Models on
-Poisoned Data},
+  title={Anti-Backdoor Learning: Training Clean Models on Poisoned Data},
   author={Li, Yige and Lyu, Xixiang and Koren, Nodens and Lyu, Lingjuan and Li, Bo and Ma, Xingjun},
   booktitle={NeurIPS},
   year={2021}
