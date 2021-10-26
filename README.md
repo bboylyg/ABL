@@ -10,13 +10,13 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 
 ## The Anti-Backdoor Learning Leaderboard
 
-- **We encourage submissions of anti-backdoor learning methods to our leaderboard**. It will be evaluated on backdoored CIFAR-10 datasets.
+**We encourage submissions of anti-backdoor learning methods to our leaderboard**. 
 
-- **Defense setting**： The goal of the defender is to train a backdoor-free model on poisoned datasets, without knonwing the extract poisoning rate or type of backdoor.
+**Evaluation**：We will run the submitted learning method on BadNets-poisoned CIFAR-10 dataset then test the Attack Sucess Rate (ASR) and Clean Accuracy (CA) of the trained model.
 
 ### This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
 
-| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR | Clean Acc |
+| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR | CA |
 | ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
 | **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |
 | **2** |                            |              |                |              |             |               |              |
