@@ -35,7 +35,7 @@ Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
 
 The unlearned model will be saved to `'weight/ABL_results/<model_name>.tar'`
 
-Please read `quick_unlearning_demo.py` to adjust the default parameters for your needs.
+Please read `quick_unlearning_demo.py` to adjust the default parameters for your experiment.
 
 ---
 
@@ -85,25 +85,21 @@ $ python backdoor_unlearning.py
 
 At this stage, the backdoor has already been learned into the isolation model.   In order to improve the clean acc of the isolation model, we finetune the model for several epochs before unlearning. If you want to go directly to see the unlearning result, you can skip the finetuning step by setting `opt.finetuning_ascent_model== False` .
 
-The final result of unlearning will be saved to `ABL_results` and `logs`. Please read `backdoor_unlearning.py` and `config.py` and adjust the parameters for your needs.
+The final result of unlearning will be saved to `ABL_results` and `logs`. Please read `backdoor_unlearning.py` and `config.py` and adjust the parameters for your experiment.
 
 
 
 ## Anti-Backdoor Learning Leaderboard
 
-- **Note**: Here, we create a leader board for anti-backdoor learning that we want to encourage you to submit your results of training a backdoor-free model on a  backdoored CIFAR-10 dataset under our **defense setting**.
-- **Defense setting**： We assume the backdoor adversary has pre-generated a set of backdoor examples
-  and has successfully injected these examples into the training dataset. We also assume the defender
-  has full control over the training process but has no prior knowledge of the proportion of backdoor
-  examples in the given dataset. The defender’s goal is to train a model on the given dataset (clean or
-  poisoned) that is as good as models trained on purely clean data. 
-- We show our ABL results against BadNets in the table bellow as a competition reference, and we welcome you to  submit your paper results to complement this table! 
+- **NWe encourage any submission of anti-backdoor learning methods to our leaderboard**. It will be evaluated on backdoored CIFAR-10 datasets.
 
-### Update News: this result is updated in 2021/10/21
+- **Defense setting**： The goal of the defender is to train a backdoor-free model on poisoned datasets, without knonwing the extract poisoning rate or type of backdoor.
+
+### This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
 
 | #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR (Defense) | CA (Defense) |
 | ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
-| **1** | **[ABL]()** | NeurIPS 2021 |  *available*   |   WRN-16-1   |   BadNets   |     3.04      |    86.11     |
+| **1** | **[ABL]()** | NeurIPS 2021 |  *available* |     BadNets    |   WRN-16-1   |     3.04      |    86.11     |
 | **2** |                            |              |                |              |             |               |              |
 | **3** |                            |              |                |              |             |               |              |
 | **4** |                            |              |                |              |             |               |              |
@@ -114,7 +110,7 @@ The final result of unlearning will be saved to `ABL_results` and `logs`. Please
 
 
 
-## Source of Backdoor Attacks
+## Links to backdoor attack repos
 
 #### Attacks
 
