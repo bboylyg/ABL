@@ -196,9 +196,9 @@ poisoning Feature space attack benchmark A unified benchmark problem for data po
 
 
 
-## References
+## Reference
 
-If you find this code is useful for your research, please cite our paper
+If you find the code is useful for your research, please cite our work:
 
 ```
 @inproceedings{li2021anti,
@@ -211,4 +211,4 @@ If you find this code is useful for your research, please cite our paper
 
 ## Contacts
 
-If you have any questions, leave a message below with GitHub.
+Please feel free to drop a message here if you have any questions.
