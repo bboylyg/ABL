@@ -1,6 +1,6 @@
 # Anti-Backdoor Learning
 
-Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Models on Poisoned Data](https://arxiv.org/pdf/2110.11571.pdf)** in PyTorch.
+PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Models on Poisoned Data](https://arxiv.org/pdf/2110.11571.pdf)**.
 
 ![Python 3.6](https://img.shields.io/badge/python-3.6-DodgerBlue.svg?style=plastic)
 ![Pytorch 1.10](https://img.shields.io/badge/pytorch-1.2.0-DodgerBlue.svg?style=plastic)
