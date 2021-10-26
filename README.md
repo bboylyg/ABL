@@ -99,7 +99,7 @@ The final result of unlearning will be saved to `ABL_results` and `logs`. Please
 
 | #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR (Defense) | CA (Defense) |
 | ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
-| **1** | **[ABL]()** | NeurIPS 2021 |  *available* |     BadNets    |   WRN-16-1   |     3.04      |    86.11     |
+| **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |
 | **2** |                            |              |                |              |             |               |              |
 | **3** |                            |              |                |              |             |               |              |
 | **4** |                            |              |                |              |             |               |              |
