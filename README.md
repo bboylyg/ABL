@@ -189,8 +189,6 @@ def plant_sin_trigger(img, delta=20, f=6, debug=False):
 
 Backdoors 101 — is a PyTorch framework for state-of-the-art backdoor defenses and attacks on deep learning models.
 
-poisoning Feature space attack benchmark A unified benchmark problem for data poisoning attacks
-
 - [trojanzoo](https://github.com/ain-soph/trojanzoo)
 - [backdoors101](https://github.com/ebagdasa/backdoors101)
 
