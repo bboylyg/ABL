@@ -1,16 +1,16 @@
 # Anti-Backdoor Learning
 
-This is an implementation demo of the NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Models on Poisoned Data](https://arxiv.org/pdf/2110.11571.pdf)** in PyTorch.
+Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Models on Poisoned Data](https://arxiv.org/pdf/2110.11571.pdf)** in PyTorch.
 
 ![Python 3.6](https://img.shields.io/badge/python-3.6-DodgerBlue.svg?style=plastic)
 ![Pytorch 1.10](https://img.shields.io/badge/pytorch-1.2.0-DodgerBlue.svg?style=plastic)
 ![CUDA 10.0](https://img.shields.io/badge/cuda-10.0-DodgerBlue.svg?style=plastic)
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)
 
-## ABL Unlearning: Quick Start with Pretrained Model
-We have already uploaded the pretrained backdoor model(i.e. gridTrigger WRN-16-1, target label 0) in the path of `./weight/backdoored_model`. 
+## Check the unlearning effect of ABL with 1% isolated backdoor images: A Quick Start with Pretrained Model
+Pretrained backdoored model: gridTrigger WRN-16-1, target label 0, pretrained weights: `./weight/backdoored_model`. 
 
-For evaluating the performance of  ABL unlearning, you can easily run command:
+Run the following command will show the effect of unlearning:
 
 ```bash
 $ python quick_unlearning_demo.py 
