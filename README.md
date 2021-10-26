@@ -7,6 +7,29 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 ![CUDA 10.0](https://img.shields.io/badge/cuda-10.0-DodgerBlue.svg?style=plastic)
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)
 
+
+
+## The Anti-Backdoor Learning Leaderboard
+
+- **We encourage submissions of anti-backdoor learning methods to our leaderboard**. It will be evaluated on backdoored CIFAR-10 datasets.
+
+- **Defense setting**： The goal of the defender is to train a backdoor-free model on poisoned datasets, without knonwing the extract poisoning rate or type of backdoor.
+
+### This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
+
+| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR (Defense) | CA (Defense) |
+| ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
+| **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |
+| **2** |                            |              |                |              |             |               |              |
+| **3** |                            |              |                |              |             |               |              |
+| **4** |                            |              |                |              |             |               |              |
+| **5** |                            |              |                |              |             |               |              |
+| **6** |                            |              |                |              |             |               |              |
+| **7** |                            |              |                |              |             |               |              |
+| **8** |                            |              |                |              |             |               |              |
+
+------
+
 ## Verifying the unlearning effect of ABL with 1% isolated data: 
 ### An Example with Pretrained Model
 WRN-16-1, CIFAR-10, GridTrigger, target label 0, weights: `./weight/backdoored_model`.
@@ -87,30 +110,8 @@ At this stage, the backdoor has already been learned into the isolation model.  
 
 The final result of unlearning will be saved to `ABL_results` and `logs`. Please read `backdoor_unlearning.py` and `config.py` and adjust the parameters for your experiment.
 
-
-
-## Anti-Backdoor Learning Leaderboard
-
-- **NWe encourage any submission of anti-backdoor learning methods to our leaderboard**. It will be evaluated on backdoored CIFAR-10 datasets.
-
-- **Defense setting**： The goal of the defender is to train a backdoor-free model on poisoned datasets, without knonwing the extract poisoning rate or type of backdoor.
-
-### This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
-
-| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR (Defense) | CA (Defense) |
-| ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
-| **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |
-| **2** |                            |              |                |              |             |               |              |
-| **3** |                            |              |                |              |             |               |              |
-| **4** |                            |              |                |              |             |               |              |
-| **5** |                            |              |                |              |             |               |              |
-| **6** |                            |              |                |              |             |               |              |
-| **7** |                            |              |                |              |             |               |              |
-| **8** |                            |              |                |              |             |               |              |
-
-
-
-## Links to backdoor attack repos
+---- 
+## Links to External Repos
 
 #### Attacks
 
