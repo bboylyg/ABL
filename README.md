@@ -7,7 +7,8 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 ![CUDA 10.0](https://img.shields.io/badge/cuda-10.0-DodgerBlue.svg?style=plastic)
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)
 
-## Check the unlearning effect of ABL with 1% isolated backdoor images: A Quick Start with Pretrained Model
+## Check the unlearning effect of ABL with 1% isolated backdoor images: 
+### An Example with Pretrained Model
 Pretrained backdoored model: gridTrigger WRN-16-1, target label 0, pretrained weights: `./weight/backdoored_model`. 
 
 Run the following command will show the effect of unlearning:
