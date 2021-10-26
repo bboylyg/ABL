@@ -8,7 +8,6 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)
 
 
-
 ## The Anti-Backdoor Learning Leaderboard
 
 - **We encourage submissions of anti-backdoor learning methods to our leaderboard**. It will be evaluated on backdoored CIFAR-10 datasets.
@@ -17,7 +16,7 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 
 ### This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
 
-| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR (Defense) | CA (Defense) |
+| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR | Clean Acc |
 | ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
 | **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |
 | **2** |                            |              |                |              |             |               |              |
