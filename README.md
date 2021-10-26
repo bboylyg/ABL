@@ -7,16 +7,16 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 ![CUDA 10.0](https://img.shields.io/badge/cuda-10.0-DodgerBlue.svg?style=plastic)
 ![License CC BY-NC](https://img.shields.io/badge/license-CC_BY--NC-DodgerBlue.svg?style=plastic)
 
-## Check the unlearning effect of ABL with 1% isolated backdoor images: 
+## Verifying the unlearning effect of ABL with 1% isolated data: 
 ### An Example with Pretrained Model
-Pretrained backdoored model: gridTrigger WRN-16-1, target label 0, pretrained weights: `./weight/backdoored_model`. 
+WRN-16-1, CIFAR-10, GridTrigger, target label 0, weights: `./weight/backdoored_model`.
 
-Run the following command will show the effect of unlearning:
+Run the following command to verify the unlearning effect:
 
 ```bash
 $ python quick_unlearning_demo.py 
 ```
-The training logs are shown in below. We can clearly see how effective and efficient of our ABL, with using only 1% (i.e. 500 examples) isolated backdoored images, can successfully decrease the ASR of backdoored WRN-16-1 from 99.98% to near 0% (almost no drop of CA) on CIFAR-10.
+The training logs are shown below. 1% isolation = 500 images from poisoned CIFAR-10. It shows the ASR (bad acc) of drops from 99.99% to 0.48% with no obviouse drop of clean acc.
 
 ```python
 Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
@@ -33,16 +33,16 @@ Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
 5,81.86666666666666,0.4777777777777778,1.1441074348025853,30.429284422132703
 ```
 
-The unlearning model will be saved at the path `'weight/ABL_results/<model_name>.tar'`
+The unlearned model will be saved to `'weight/ABL_results/<model_name>.tar'`
 
-Please carefully read the `quick_unlearning_demo.py` , then change the default parameters for your experiment.
+Please read `quick_unlearning_demo.py` to adjust the default parameters for your needs.
 
 ---
 
-## Prepare Poisoning Data
-We have provided a `DatasetBD` Class in `data_loader.py` for generating training set of different backdoor attacks.  
+## Prepare Poisoned Data
+The `DatasetBD` Class in `data_loader.py` can be used to generate poisoned training set by different attacks.  
 
-The use of this code to create a poisoned data is look like this:
+The following is an example:
 
 ```python
 from data_loader import *
@@ -59,37 +59,37 @@ from data_loader import *
 
     test_clean_loader, test_bad_loader = get_test_loader(opt)
 ```
-However, for the other attacks such as `Dynamic, DFTS, FC, etc`. It is not easy to contain them into the `get_backdoor_loader` . So the much elegant way is to create a local fixed poisoning data of these attacks by using the demo code `create_poisoned_data.py`, and then load this poisoned data by set the `opt.loader_fixed_data == True`. 
+Note that, for attacks `Dynamic, DFTS, FC, etc`, it is hard to include them in the `get_backdoor_loader()`. So, better to create pre-poisoned datasets for these attacks using `create_poisoned_data.py`, then load the poisoned dataset by setting `opt.loader_fixed_data == True`. 
 
-We provide a demo of how to  **create poisoning data of dynamic attack** in the `create_backdoor_data` dictionary.
+An example of how to  **create a poisoned dataset by the Dynamic attack** is given in the `create_backdoor_data` dictionary.
 
-Please carefully read the `create_poisoned_data.py` and `get_backdoor_loader`, then change the parameters for your experiment.  
+Please feel free to read `create_poisoned_data.py` and `get_backdoor_loader` and adjust the parameters for your experiment.  
 
-## ABL Stage One: Backdoor Isolation
-To obtain the 1% isolation data and isolation model, you can easily run command:
+## ABL - Stage One: Backdoor Isolation
+To isolate 1% potentially backdoored examples and an isolation model, you can run the following command:
 
 ```bash
 $ python backdoor_isolation.py 
 ```
 
-After that, you can get a `isolation model` and then use it to isolate `1% poisoned data` of the lowest training loss.   The `1% poisoned data` will be saved in the path `'isolation_data'` and `'weight/isolation_model'` respectively. 
+After that, you will get an `isolation model` and use it to isolate `1% poisoned data` of the lowest training loss.   The isolated data and isolation model will be saved to `'isolation_data'` and `'weight/isolation_model'`, respectively. 
 
-Please check more details of our experimental settings in section 4 and Appendix A of paper, then change the parameters in `config.py` for your experiment.  
+Please check more details of the experimental settings in Section 4 and Appendix A of our paper, and adjust the parameters in `config.py` for your experiment.  
 
-## ABL Stage Two: Backdoor Unlearning
-With the 1% isolation backdoor set and a isolation model, we can then continue with the later training of unlearning by running the code:
+## ABL - Stage Two: Backdoor Unlearning
+With the 1% isolated data and the isolation model, we can then continue with the later training of unlearning using the following code:
 
 ```bash
 $ python backdoor_unlearning.py 
 ```
 
-Note that at this stage, the backdoor has already been learned by the isolation model.   In order to further improve clean accuracy of isolation model, we finetuning the model some epochs before backdoor unlearning. If you want directly to see unlearning result, you can select to skip the finetuning of the isolation model by setting argument  of `opt.finetuning_ascent_model== False` .
+At this stage, the backdoor has already been learned into the isolation model.   In order to improve the clean acc of the isolation model, we finetune the model for several epochs before unlearning. If you want to go directly to see the unlearning result, you can skip the finetuning step by setting `opt.finetuning_ascent_model== False` .
 
-The final results of unlearning will be saved in the path `ABL_results`, and `logs` . Please carefully read the `backdoor_unlearning.py` and `config.py`, then change the parameters for your experiment.  
+The final result of unlearning will be saved to `ABL_results` and `logs`. Please read `backdoor_unlearning.py` and `config.py` and adjust the parameters for your needs.
 
 
 
-## Leader-board of training backdoor-free model on Poisoned dataset
+## Anti-Backdoor Learning Leaderboard
 
 - **Note**: Here, we create a leader board for anti-backdoor learning that we want to encourage you to submit your results of training a backdoor-free model on a  backdoored CIFAR-10 dataset under our **defense setting**.
 - **Defense setting**： We assume the backdoor adversary has pre-generated a set of backdoor examples
