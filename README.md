@@ -30,7 +30,7 @@ We encourage submissions of anti-backdoor learning methods to our leaderboard.
 ------
 
 ## Verifying the unlearning effect of ABL with 1% isolated data: 
-### An Example with Pretrained Model
+### An example with a pretrained model
 WRN-16-1, CIFAR-10, GridTrigger, target label 0, weights: `./weight/backdoored_model`.
 
 Run the following command to verify the unlearning effect:
@@ -61,7 +61,7 @@ Please read `quick_unlearning_demo.py` to adjust the default parameters for your
 
 ---
 
-## Prepare Poisoned Data
+## How to Prepare Poisoned Data?
 The `DatasetBD` Class in `data_loader.py` can be used to generate poisoned training set by different attacks.  
 
 The following is an example:
