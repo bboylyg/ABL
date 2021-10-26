@@ -10,7 +10,7 @@ PyTorch Code for NeurIPS 2021 paper **[Anti-Backdoor Learning: Training Clean Mo
 
 ## The Anti-Backdoor Learning Leaderboard
 
-**We encourage submissions of anti-backdoor learning methods to our leaderboard**. 
+We encourage submissions of anti-backdoor learning methods to our leaderboard. 
 
 **Evaluation**：We will run the submitted learning method on BadNets-poisoned CIFAR-10 dataset then test the Attack Sucess Rate (ASR) and Clean Accuracy (CA) of the trained model.
 
