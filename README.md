@@ -14,7 +14,7 @@ We encourage submissions of anti-backdoor learning methods to our leaderboard.
 
 **Evaluation**：We will run the submitted learning method on BadNets-poisoned CIFAR-10 dataset then test the Attack Sucess Rate (ASR) and Clean Accuracy (CA) of the trained model.
 
-**Note**: This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
+**Note**: This leaderboard is created on 2021/10/21 and updated on <span style="color:red">*2021/10/21*</span>.
 
 | #     |           Paper            |    Venue     | Poisoned data | Architecture | Attack | ASR (%)| CA (%)|
 | ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
