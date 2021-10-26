@@ -16,7 +16,7 @@ We encourage submissions of anti-backdoor learning methods to our leaderboard.
 
 ### This leaderboard is created on 2021/10/21 and updated on 2021/10/21.
 
-| #     |           Paper            |    Venue     | Poisoning data | Architecture | Attack type | ASR | CA |
+| #     |           Paper            |    Venue     | Poisoned data | Architecture | Attack | ASR | CA |
 | ----- | :------------------------: | :----------: | :------------: | :----------: | :---------: | :-----------: | :----------: |
 | **1** | **[ABL]()** | NeurIPS 2021 |  *available* |    WRN-16-1    |   BadNets   |     3.04     |    86.11      |
 | **2** |                            |              |                |              |             |               |              |
