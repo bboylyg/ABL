@@ -194,7 +194,7 @@ Backdoors 101 — is a PyTorch framework for state-of-the-art backdoor defenses 
 
 
 
-## Reference
+## Citation
 
 If you find the code is useful for your research, please cite our work:
 
