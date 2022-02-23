@@ -234,7 +234,7 @@ def train(opt):
     print('----------- Train Initialization --------------')
     for epoch in range(0, opt.tuning_epochs):
 
-        adjust_learning_rate(optimizer, epoch, opt.lr)
+        adjust_learning_rate(optimizer, epoch, opt)
 
         # train every epoch
         if epoch == 0:
