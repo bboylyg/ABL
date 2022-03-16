@@ -34,9 +34,9 @@ def compute_loss_value(opt, poisoned_data, model_ascent):
 
         losses_record.append(loss.item())
 
-    losses_idx = np.argsort(-np.array(losses_record))   # get the index of examples by loss value in descending order
+    losses_idx = np.argsort(np.array(losses_record))   # get the index of examples by loss value in ascending order
 
-    # Show the top 10 loss values
+    # Show the lowest 10 loss values
     losses_record_arr = np.array(losses_record)
     print('Top ten loss value:', losses_record_arr[losses_idx[:10]])
 
