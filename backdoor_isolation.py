@@ -82,7 +82,7 @@ def isolate_data(opt, poisoned_data, losses_idx):
         else:
             # save the isolation examples
             np.save(data_path_isolation, isolation_examples)
-            np.save(data_path_other, isolation_examples)
+            np.save(data_path_other, other_examples)
 
     print('Finish collecting {} isolation examples: '.format(len(isolation_examples)))
     print('Finish collecting {} other examples: '.format(len(other_examples)))
