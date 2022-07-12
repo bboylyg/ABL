@@ -106,7 +106,7 @@ def train(opt):
     model_ascent, _ = select_model(dataset=opt.dataset,
                                                   model_name=opt.model_name,
                                                   pretrained=True,
-                                                  pretrained_models_path=opt.checkpoint_root,
+                                                  pretrained_models_path=opt.isolation_model_root,
                                                   n_classes=opt.num_class)
     model_ascent.to(opt.device)
     print('Finish loading ascent model...')
