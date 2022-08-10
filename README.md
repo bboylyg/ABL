@@ -58,9 +58,12 @@ Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
 The unlearned model will be saved to `'weight/ABL_results/<model_name>.tar'`
 
 Please read `quick_unlearning_demo.py` to adjust the default parameters for your experiment.
+
 ---
 
 ## More defense results with Data Augmentation BadNets model
+
+```python
 [Logs for our ABL against Badnet Attacks]
 
 ----------- Model Fine-tuning --------------
@@ -208,6 +211,7 @@ epoch: 4  lr: 0.0005
 testing the ascended model......
 [Clean] Prec@1: 91.80, Loss: 0.3656
 [Bad] Prec@1: 0.16, Loss: 19.2982
+```
 
 ---
 
