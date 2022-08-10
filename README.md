@@ -61,7 +61,7 @@ Please read `quick_unlearning_demo.py` to adjust the default parameters for your
 
 ---
 
-## More defense results with Data Augmentation BadNets model
+## More defense results on BadNets model trained with Data Augmentation 
 
 ```python
 [Logs for our ABL against Badnet Attacks]
