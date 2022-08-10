@@ -58,6 +58,156 @@ Epoch,Test_clean_acc,Test_bad_acc,Test_clean_loss,Test_bad_loss
 The unlearned model will be saved to `'weight/ABL_results/<model_name>.tar'`
 
 Please read `quick_unlearning_demo.py` to adjust the default parameters for your experiment.
+---
+
+## More defense results with Data Augmentation BadNets model
+[Logs for our ABL against Badnet Attacks]
+
+----------- Model Fine-tuning --------------
+epoch: 40  lr: 0.0100
+Epoch[41]:[200/774] loss:0.1456(0.1240)  prec@1:98.44(95.84)  prec@5:98.44(99.96)
+Epoch[41]:[400/774] loss:0.0553(0.1080)  prec@1:98.44(96.38)  prec@5:100.00(99.97)
+Epoch[41]:[600/774] loss:0.0693(0.1015)  prec@1:96.88(96.63)  prec@5:100.00(99.97)
+[Clean] Prec@1: 92.23, Loss: 0.2408
+[Bad] Prec@1: 100.00, Loss: 0.0001
+epoch: 41  lr: 0.0100
+Epoch[42]:[200/774] loss:0.0532(0.0653)  prec@1:98.44(97.89)  prec@5:100.00(100.00)
+Epoch[42]:[400/774] loss:0.0534(0.0659)  prec@1:98.44(97.76)  prec@5:100.00(100.00)
+Epoch[42]:[600/774] loss:0.0514(0.0659)  prec@1:96.88(97.76)  prec@5:100.00(99.99)
+[Clean] Prec@1: 92.60, Loss: 0.2390
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 42  lr: 0.0100
+Epoch[43]:[200/774] loss:0.0054(0.0499)  prec@1:100.00(98.33)  prec@5:100.00(99.99)
+Epoch[43]:[400/774] loss:0.0429(0.0525)  prec@1:98.44(98.21)  prec@5:100.00(99.99)
+Epoch[43]:[600/774] loss:0.0448(0.0537)  prec@1:98.44(98.19)  prec@5:100.00(99.99)
+[Clean] Prec@1: 92.52, Loss: 0.2409
+[Bad] Prec@1: 100.00, Loss: 0.0001
+epoch: 43  lr: 0.0100
+Epoch[44]:[200/774] loss:0.0253(0.0472)  prec@1:98.44(98.41)  prec@5:100.00(99.99)
+Epoch[44]:[400/774] loss:0.0104(0.0463)  prec@1:100.00(98.43)  prec@5:100.00(99.99)
+Epoch[44]:[600/774] loss:0.0200(0.0452)  prec@1:100.00(98.46)  prec@5:100.00(99.99)
+[Clean] Prec@1: 92.60, Loss: 0.2459
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 44  lr: 0.0100
+Epoch[45]:[200/774] loss:0.0510(0.0385)  prec@1:98.44(98.79)  prec@5:100.00(99.99)
+Epoch[45]:[400/774] loss:0.0244(0.0381)  prec@1:98.44(98.82)  prec@5:100.00(100.00)
+Epoch[45]:[600/774] loss:0.0203(0.0391)  prec@1:100.00(98.83)  prec@5:100.00(99.99)
+[Clean] Prec@1: 92.81, Loss: 0.2484
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 45  lr: 0.0100
+Epoch[46]:[200/774] loss:0.0110(0.0374)  prec@1:100.00(98.75)  prec@5:100.00(99.99)
+Epoch[46]:[400/774] loss:0.0204(0.0371)  prec@1:98.44(98.79)  prec@5:100.00(99.99)
+Epoch[46]:[600/774] loss:0.0183(0.0369)  prec@1:100.00(98.76)  prec@5:100.00(99.99)
+[Clean] Prec@1: 92.99, Loss: 0.2495
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 46  lr: 0.0100
+Epoch[47]:[200/774] loss:0.0452(0.0315)  prec@1:98.44(98.97)  prec@5:100.00(100.00)
+Epoch[47]:[400/774] loss:0.0315(0.0310)  prec@1:98.44(98.98)  prec@5:100.00(100.00)
+Epoch[47]:[600/774] loss:0.0298(0.0303)  prec@1:100.00(99.01)  prec@5:100.00(100.00)
+[Clean] Prec@1: 92.82, Loss: 0.2563
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 47  lr: 0.0100
+Epoch[48]:[200/774] loss:0.0397(0.0269)  prec@1:98.44(99.12)  prec@5:100.00(100.00)
+Epoch[48]:[400/774] loss:0.0617(0.0262)  prec@1:98.44(99.16)  prec@5:100.00(100.00)
+Epoch[48]:[600/774] loss:0.0630(0.0270)  prec@1:98.44(99.16)  prec@5:100.00(100.00)
+[Clean] Prec@1: 92.81, Loss: 0.2678
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 48  lr: 0.0100
+Epoch[49]:[200/774] loss:0.0251(0.0267)  prec@1:100.00(99.15)  prec@5:100.00(100.00)
+Epoch[49]:[400/774] loss:0.0298(0.0262)  prec@1:98.44(99.14)  prec@5:100.00(100.00)
+Epoch[49]:[600/774] loss:0.0384(0.0258)  prec@1:98.44(99.15)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.09, Loss: 0.2586
+[Bad] Prec@1: 100.00, Loss: 0.0002
+epoch: 49  lr: 0.0100
+Epoch[50]:[200/774] loss:0.0359(0.0203)  prec@1:98.44(99.30)  prec@5:100.00(100.00)
+Epoch[50]:[400/774] loss:0.0062(0.0214)  prec@1:100.00(99.27)  prec@5:100.00(100.00)
+Epoch[50]:[600/774] loss:0.0418(0.0222)  prec@1:98.44(99.25)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.03, Loss: 0.2626
+[Bad] Prec@1: 100.00, Loss: 0.0001
+epoch: 50  lr: 0.0100
+Epoch[51]:[200/774] loss:0.0040(0.0222)  prec@1:100.00(99.27)  prec@5:100.00(100.00)
+Epoch[51]:[400/774] loss:0.0269(0.0236)  prec@1:98.44(99.21)  prec@5:100.00(100.00)
+Epoch[51]:[600/774] loss:0.0219(0.0234)  prec@1:100.00(99.23)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.19, Loss: 0.2604
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 51  lr: 0.0100
+Epoch[52]:[200/774] loss:0.0154(0.0201)  prec@1:98.44(99.34)  prec@5:100.00(100.00)
+Epoch[52]:[400/774] loss:0.0328(0.0200)  prec@1:98.44(99.38)  prec@5:100.00(100.00)
+Epoch[52]:[600/774] loss:0.0220(0.0204)  prec@1:98.44(99.36)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.27, Loss: 0.2652
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 52  lr: 0.0100
+Epoch[53]:[200/774] loss:0.0090(0.0194)  prec@1:100.00(99.39)  prec@5:100.00(100.00)
+Epoch[53]:[400/774] loss:0.0019(0.0195)  prec@1:100.00(99.41)  prec@5:100.00(100.00)
+Epoch[53]:[600/774] loss:0.0402(0.0190)  prec@1:98.44(99.45)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.04, Loss: 0.2735
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 53  lr: 0.0100
+Epoch[54]:[200/774] loss:0.0154(0.0186)  prec@1:100.00(99.38)  prec@5:100.00(100.00)
+Epoch[54]:[400/774] loss:0.0124(0.0182)  prec@1:100.00(99.40)  prec@5:100.00(100.00)
+Epoch[54]:[600/774] loss:0.0144(0.0181)  prec@1:100.00(99.45)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.17, Loss: 0.2693
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 54  lr: 0.0100
+Epoch[55]:[200/774] loss:0.0119(0.0168)  prec@1:100.00(99.43)  prec@5:100.00(100.00)
+Epoch[55]:[400/774] loss:0.0228(0.0170)  prec@1:98.44(99.42)  prec@5:100.00(100.00)
+Epoch[55]:[600/774] loss:0.0096(0.0164)  prec@1:100.00(99.47)  prec@5:100.00(100.00)
+[Clean] Prec@1: 92.84, Loss: 0.2786
+[Bad] Prec@1: 100.00, Loss: 0.0001
+epoch: 55  lr: 0.0100
+Epoch[56]:[200/774] loss:0.0307(0.0146)  prec@1:98.44(99.51)  prec@5:100.00(100.00)
+Epoch[56]:[400/774] loss:0.0065(0.0149)  prec@1:100.00(99.52)  prec@5:100.00(100.00)
+Epoch[56]:[600/774] loss:0.0348(0.0155)  prec@1:98.44(99.50)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.12, Loss: 0.2794
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 56  lr: 0.0100
+Epoch[57]:[200/774] loss:0.0014(0.0134)  prec@1:100.00(99.59)  prec@5:100.00(100.00)
+Epoch[57]:[400/774] loss:0.0060(0.0133)  prec@1:100.00(99.59)  prec@5:100.00(100.00)
+Epoch[57]:[600/774] loss:0.0400(0.0133)  prec@1:95.31(99.61)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.13, Loss: 0.2819
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 57  lr: 0.0100
+Epoch[58]:[200/774] loss:0.0062(0.0122)  prec@1:100.00(99.60)  prec@5:100.00(100.00)
+Epoch[58]:[400/774] loss:0.0065(0.0134)  prec@1:100.00(99.56)  prec@5:100.00(100.00)
+Epoch[58]:[600/774] loss:0.0198(0.0134)  prec@1:100.00(99.59)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.11, Loss: 0.2795
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 58  lr: 0.0100
+Epoch[59]:[200/774] loss:0.0053(0.0094)  prec@1:100.00(99.73)  prec@5:100.00(100.00)
+Epoch[59]:[400/774] loss:0.0064(0.0105)  prec@1:100.00(99.70)  prec@5:100.00(100.00)
+Epoch[59]:[600/774] loss:0.0068(0.0112)  prec@1:100.00(99.67)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.04, Loss: 0.2900
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 59  lr: 0.0100
+Epoch[60]:[200/774] loss:0.0039(0.0147)  prec@1:100.00(99.55)  prec@5:100.00(99.99)
+Epoch[60]:[400/774] loss:0.0399(0.0142)  prec@1:96.88(99.58)  prec@5:100.00(100.00)
+Epoch[60]:[600/774] loss:0.0030(0.0134)  prec@1:100.00(99.59)  prec@5:100.00(100.00)
+[Clean] Prec@1: 93.24, Loss: 0.2905
+[Bad] Prec@1: 100.00, Loss: 0.0000
+
+----------- Model unlearning --------------
+epoch: 0  lr: 0.0005
+[Clean] Prec@1: 93.24, Loss: 0.2905
+[Bad] Prec@1: 100.00, Loss: 0.0000
+testing the ascended model......
+[Clean] Prec@1: 93.24, Loss: 0.2905
+[Bad] Prec@1: 100.00, Loss: 0.0000
+epoch: 1  lr: 0.0005
+testing the ascended model......
+[Clean] Prec@1: 92.59, Loss: 0.3283
+[Bad] Prec@1: 15.84, Loss: 4.3276
+epoch: 2  lr: 0.0005
+testing the ascended model......
+[Clean] Prec@1: 91.88, Loss: 0.3632
+[Bad] Prec@1: 0.30, Loss: 13.5180
+epoch: 3  lr: 0.0005
+testing the ascended model......
+[Clean] Prec@1: 91.71, Loss: 0.3730
+[Bad] Prec@1: 0.17, Loss: 17.6328
+epoch: 4  lr: 0.0005
+testing the ascended model......
+[Clean] Prec@1: 91.80, Loss: 0.3656
+[Bad] Prec@1: 0.16, Loss: 19.2982
 
 ---
 
